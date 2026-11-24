@@ -10,6 +10,10 @@
 <meta property="og:url" content="https://mcvickarlabs.com/">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://mcvickarlabs.com/">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://mcvickarlabs.com/icon-512.png">
 <style>
   :root {
     --bg: #faf9f6;
@@ -41,11 +45,8 @@
   }
   .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
   header { padding: 28px 0; border-bottom: 1px solid var(--line); }
-  .brand { display: flex; align-items: center; gap: 12px; font-weight: 600; letter-spacing: -0.01em; font-size: 18px; }
-  .mark {
-    width: 30px; height: 30px; border-radius: 8px; background: var(--accent);
-    color: var(--bg); display: grid; place-items: center; font-size: 15px; font-weight: 700;
-  }
+  .brand { color: var(--ink); text-decoration: none !important; display: flex; align-items: center; gap: 12px; font-weight: 600; letter-spacing: -0.01em; font-size: 18px; }
+  .mark { width: 35px; height: 30px; fill: var(--accent); flex: none; }
   .hero { padding: 72px 0 12px; }
   h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 18px; font-weight: 650; }
   .lede { font-size: 19px; color: var(--muted); max-width: 620px; margin: 0; }
@@ -71,7 +72,7 @@
 </head>
 <body>
   <header>
-    <div class="wrap brand"><div class="mark" aria-hidden="true">M</div>McVickar Labs</div>
+    <a class="wrap brand" href="/"><svg class="mark" viewBox="0 0 116 100" aria-hidden="true"><path d="M0 0H20L50 36L80 0H100V72H80V30L50 66L20 30V100H0Z"/><path d="M26 43L46 67V82H116V100H26Z"/></svg>McVickar Labs</a>
   </header>
 
   <main class="wrap">
@@ -90,7 +91,7 @@
       <article class="app">
         <div class="app-head"><h3>DDA: Divorce Discovery Assist</h3><span class="tag">Mac · in testing</span></div>
         <p>Organizes the financial records in a divorce: every statement read, what's missing month by month, and each figure linked to the page it came from. For family-law offices and the people they represent.</p>
-        <div class="links"><a href="https://mcvickar.com/dda-privacy/">Privacy policy</a><a href="mailto:testing@mcvickar.com">Join the pilot</a></div>
+        <div class="links"><a href="/dda/">Learn more</a><a href="https://mcvickar.com/dda-privacy/">Privacy policy</a><a href="mailto:testing@mcvickar.com">Join the pilot</a></div>
       </article>
       <article class="app">
         <div class="app-head"><h3>PJ</h3><span class="tag">iPhone &amp; Mac · App Store</span></div>

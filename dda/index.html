@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DDA: Divorce Discovery Assist · McVickar Labs</title>
+<meta name="description" content="DDA organizes the financial records in a divorce on your own Mac: every statement read, what's missing month by month, and every figure linked to the page it came from.">
+<meta property="og:title" content="DDA: Divorce Discovery Assist">
+<meta property="og:description" content="Divorce financial records, organized and verified on your own Mac. Nothing leaves it.">
+<meta property="og:url" content="https://mcvickarlabs.com/dda/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://mcvickarlabs.com/icon-512.png">
+<link rel="canonical" href="https://mcvickarlabs.com/dda/">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #faf9f6;
+    --surface: #ffffff;
+    --ink: #1c1c1e;
+    --muted: #5f6368;
+    --line: #e3e1db;
+    --accent: #2f5d50;
+    --accent-soft: #e6efeb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141515;
+      --surface: #1c1d1e;
+      --ink: #ececea;
+      --muted: #a2a5a8;
+      --line: #2c2e30;
+      --accent: #8cc3b0;
+      --accent-soft: #1f2b27;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 28px 0; border-bottom: 1px solid var(--line); }
+  .brand { color: var(--ink); text-decoration: none !important; display: flex; align-items: center; gap: 12px; font-weight: 600; letter-spacing: -0.01em; font-size: 18px; }
+  .mark { width: 35px; height: 30px; fill: var(--accent); flex: none; }
+  .hero { padding: 72px 0 12px; }
+  h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 18px; font-weight: 650; }
+  .lede { font-size: 19px; color: var(--muted); max-width: 620px; margin: 0; }
+  .principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 44px 0 8px; }
+  .principle { border-top: 2px solid var(--accent); padding-top: 12px; }
+  .principle b { display: block; margin-bottom: 4px; }
+  .principle span { color: var(--muted); font-size: 15px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 56px 0 16px; font-weight: 600; }
+  .apps { display: grid; gap: 14px; }
+  .app {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 22px 22px 20px;
+  }
+  .app-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; margin-bottom: 6px; }
+  .app h3 { margin: 0; font-size: 20px; letter-spacing: -0.01em; }
+  .tag { font-size: 12.5px; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+  .app p { margin: 0 0 12px; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  footer.wrap { margin-top: 72px; padding: 28px 20px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+  .eyebrow { font-size: 14px; color: var(--accent); font-weight: 600; letter-spacing: .02em; margin: 0 0 10px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+  .feature { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+  .feature b { display: block; margin-bottom: 4px; font-size: 17px; }
+  .feature span { color: var(--muted); font-size: 15px; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+  .panel { border-top: 2px solid var(--accent); padding-top: 12px; }
+  .panel h3 { margin: 0 0 6px; font-size: 19px; }
+  .panel p { margin: 0; color: var(--muted); }
+  ul.plain { margin: 0; padding-left: 20px; color: var(--muted); }
+  ul.plain li { margin: 4px 0; }
+  .cta { margin-top: 56px; background: var(--accent-soft); border-radius: 14px; padding: 24px; }
+  .cta h3 { margin: 0 0 6px; font-size: 20px; }
+  .cta p { margin: 0 0 12px; color: var(--muted); }
+  .button { display: inline-block; background: var(--accent); color: var(--bg) !important; padding: 10px 18px; border-radius: 10px; font-weight: 600; text-decoration: none !important; }
+</style>
+</head>
+<body>
+  <header>
+    <a class="wrap brand" href="/"><svg class="mark" viewBox="0 0 116 100" aria-hidden="true"><path d="M0 0H20L50 36L80 0H100V72H80V30L50 66L20 30V100H0Z"/><path d="M26 43L46 67V82H116V100H26Z"/></svg>McVickar Labs</a>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">DDA · Divorce Discovery Assist · for Mac</p>
+      <h1>The financial record of a divorce, organized and verified, on your own Mac.</h1>
+      <p class="lede">DDA reads every bank, card and brokerage statement, shows what's missing month by month, and links every figure to the page it came from. Work that takes weeks by hand takes hours, and nothing leaves your Mac.</p>
+    </section>
+
+    <h2>What it does</h2>
+    <section class="features">
+      <div class="feature"><b>Reads every statement</b><span>Point it at a folder, a drive or a box of scans. DDA sorts and de-duplicates thousands of files and reads statements from major banks, card issuers and brokerages.</span></div>
+      <div class="feature"><b>Shows what's missing</b><span>Every account, month by month: received, missing, requested, or not due yet.</span></div>
+      <div class="feature"><b>Tracks each production</b><span>When new documents arrive, see what changed and which gaps they filled.</span></div>
+      <div class="feature"><b>Account covers and key dates</b><span>A cover page for each account, and balances on the dates that matter, each linked to its statement.</span></div>
+      <div class="feature"><b>Never guesses</b><span>Every figure traces to its page. When DDA can't read something, it says UNKNOWN instead of estimating.</span></div>
+      <div class="feature"><b>Locked, verifiable packages</b><span>Hand the record to an attorney, the court or a client as an encrypted package. The receiving copy checks every file.</span></div>
+    </section>
+
+    <h2>Private by design</h2>
+    <section class="principles" style="margin-top:0">
+      <div class="principle"><b>Stays on your Mac</b><span>Case files and findings are kept on your Mac, encrypted, behind your own password.</span></div>
+      <div class="principle"><b>No AI calls, no uploads</b><span>DDA doesn't send your documents to any AI service or server to read them.</span></div>
+      <div class="principle"><b>Accountable</b><span>Every change is recorded: who, what and when.</span></div>
+    </section>
+
+    <h2>Who it's for</h2>
+    <section class="two">
+      <div class="panel"><h3>Family-law offices</h3><p>Bring in a client's documents, see the whole financial picture and what's still outstanding, and keep it current as each production arrives. No per-page fees.</p></div>
+      <div class="panel"><h3>People going through a divorce</h3><p>Organize your own statements at home before your attorney spends an hour on them, then hand over one locked package.</p></div>
+    </section>
+
+    <h2>Coming next</h2>
+    <ul class="plain">
+      <li>Following the money: unusual spending, who paid what, and where transfers went</li>
+      <li>Texts, emails and co-parenting messages on one searchable timeline</li>
+      <li>Several office Macs working on one matter, each person with their own sign-in</li>
+      <li>An iPhone companion, and secure messaging between attorney, staff and client</li>
+    </ul>
+
+    <section class="cta">
+      <h3>DDA is in its pilot with family-law offices.</h3>
+      <p>If your office would like to try it, get in touch.</p>
+      <a class="button" href="mailto:testing@mcvickar.com?subject=DDA%20pilot">Ask about the pilot</a>
+      <span style="margin-left:14px;font-size:15px"><a href="https://mcvickar.com/dda-privacy/">Privacy policy</a></span>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span>© 2026 McVickar Labs, LLC · DDA is a Mac app</span>
+    <span><a href="/">McVickar Labs</a> · <a href="mailto:testing@mcvickar.com">testing@mcvickar.com</a></span>
+  </footer>
+</body>
+</html>
