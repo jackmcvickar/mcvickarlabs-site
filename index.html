@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>McVickar Labs</title>
+<meta name="description" content="McVickar Labs makes careful, private software for Mac and iPhone.">
+<meta property="og:title" content="McVickar Labs">
+<meta property="og:description" content="Careful, private software for Mac and iPhone.">
+<meta property="og:url" content="https://mcvickarlabs.com/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://mcvickarlabs.com/">
+<style>
+  :root {
+    --bg: #faf9f6;
+    --surface: #ffffff;
+    --ink: #1c1c1e;
+    --muted: #5f6368;
+    --line: #e3e1db;
+    --accent: #2f5d50;
+    --accent-soft: #e6efeb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141515;
+      --surface: #1c1d1e;
+      --ink: #ececea;
+      --muted: #a2a5a8;
+      --line: #2c2e30;
+      --accent: #8cc3b0;
+      --accent-soft: #1f2b27;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 28px 0; border-bottom: 1px solid var(--line); }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 600; letter-spacing: -0.01em; font-size: 18px; }
+  .mark {
+    width: 30px; height: 30px; border-radius: 8px; background: var(--accent);
+    color: var(--bg); display: grid; place-items: center; font-size: 15px; font-weight: 700;
+  }
+  .hero { padding: 72px 0 12px; }
+  h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 18px; font-weight: 650; }
+  .lede { font-size: 19px; color: var(--muted); max-width: 620px; margin: 0; }
+  .principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 44px 0 8px; }
+  .principle { border-top: 2px solid var(--accent); padding-top: 12px; }
+  .principle b { display: block; margin-bottom: 4px; }
+  .principle span { color: var(--muted); font-size: 15px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 56px 0 16px; font-weight: 600; }
+  .apps { display: grid; gap: 14px; }
+  .app {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 22px 22px 20px;
+  }
+  .app-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; margin-bottom: 6px; }
+  .app h3 { margin: 0; font-size: 20px; letter-spacing: -0.01em; }
+  .tag { font-size: 12.5px; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+  .app p { margin: 0 0 12px; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  footer.wrap { margin-top: 72px; padding: 28px 20px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap brand"><div class="mark" aria-hidden="true">M</div>McVickar Labs</div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Careful software for the things that matter.</h1>
+      <p class="lede">McVickar Labs makes private, well-built apps for Mac and iPhone. Your information stays on your devices, every result can be checked, and nothing is guessed.</p>
+      <div class="principles">
+        <div class="principle"><b>Private by design</b><span>Your data stays on your own devices, encrypted.</span></div>
+        <div class="principle"><b>Nothing guessed</b><span>When something isn't known, the app says so.</span></div>
+        <div class="principle"><b>Built to last</b><span>Small, tested releases. No ads, no trackers.</span></div>
+      </div>
+    </section>
+
+    <h2>Apps</h2>
+    <section class="apps">
+      <article class="app">
+        <div class="app-head"><h3>DDA: Divorce Discovery Assist</h3><span class="tag">Mac · in testing</span></div>
+        <p>Organizes the financial records in a divorce: every statement read, what's missing month by month, and each figure linked to the page it came from. For family-law offices and the people they represent.</p>
+        <div class="links"><a href="https://mcvickar.com/dda-privacy/">Privacy policy</a><a href="mailto:testing@mcvickar.com">Join the pilot</a></div>
+      </article>
+      <article class="app">
+        <div class="app-head"><h3>PJ</h3><span class="tag">iPhone &amp; Mac · App Store</span></div>
+        <p>A private journal for your thoughts, voice notes and pictures, kept in your own iCloud.</p>
+        <div class="links"><a href="https://pjjournal.com/">pjjournal.com</a></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span>© 2026 McVickar Labs, LLC</span>
+    <span><a href="mailto:testing@mcvickar.com">testing@mcvickar.com</a></span>
+  </footer>
+</body>
+</html>
