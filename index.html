@@ -47,6 +47,10 @@
   header { padding: 28px 0; border-bottom: 1px solid var(--line); }
   .brand { color: var(--ink); text-decoration: none !important; display: flex; align-items: center; gap: 12px; font-weight: 600; letter-spacing: -0.01em; font-size: 18px; }
   .mark { width: 35px; height: 30px; fill: var(--accent); flex: none; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  header nav { display: flex; gap: 22px; font-size: 15px; white-space: nowrap; }
+  header nav a { color: var(--muted); }
+  header nav a:hover, header nav a[aria-current="page"] { color: var(--ink); text-decoration: none; }
   .hero { padding: 72px 0 12px; }
   h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 18px; font-weight: 650; }
   .lede { font-size: 19px; color: var(--muted); max-width: 620px; margin: 0; }
@@ -72,7 +76,7 @@
 </head>
 <body>
   <header>
-    <a class="wrap brand" href="/"><svg class="mark" viewBox="0 0 116 100" aria-hidden="true"><path d="M0 0H20L50 36L80 0H100V72H80V30L50 66L20 30V100H0Z"/><path d="M26 43L46 67V82H116V100H26Z"/></svg>McVickar Labs</a>
+    <div class="wrap"><a class="brand" href="/"><svg class="mark" viewBox="0 0 116 100" aria-hidden="true"><path d="M0 0H20L50 36L80 0H100V72H80V30L50 66L20 30V100H0Z"/><path d="M26 43L46 67V82H116V100H26Z"/></svg>McVickar Labs</a><nav aria-label="Site"><a href="/products/">Products</a><a href="mailto:testing@mcvickar.com">Contact</a></nav></div>
   </header>
 
   <main class="wrap">
@@ -94,11 +98,12 @@
         <div class="links"><a href="/dda/">Learn more</a><a href="https://mcvickar.com/dda-privacy/">Privacy policy</a><a href="mailto:testing@mcvickar.com">Join the pilot</a></div>
       </article>
       <article class="app">
-        <div class="app-head"><h3>PJ</h3><span class="tag">iPhone &amp; Mac · App Store</span></div>
-        <p>A private journal for your thoughts, voice notes and pictures, kept in your own iCloud.</p>
-        <div class="links"><a href="https://pjjournal.com/">pjjournal.com</a></div>
+        <div class="app-head"><h3>PJ</h3><span class="tag">iPhone · iPad · Mac · Apple Watch · App Store</span></div>
+        <p>A voice-first private journal. Talk or type; everything is end-to-end encrypted with keys only on your devices, and syncs through your own iCloud. One purchase covers all your devices.</p>
+        <div class="links"><a href="https://pjjournal.com/">pjjournal.com</a><a href="https://apps.apple.com/app/apple-store/id6815332769">App Store</a></div>
       </article>
     </section>
+    <p style="margin:16px 0 0;font-size:15px"><a href="/products/">All products →</a></p>
   </main>
 
   <footer class="wrap">
