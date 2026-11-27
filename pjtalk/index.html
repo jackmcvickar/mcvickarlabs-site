@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PJ Talk · McVickar Labs</title>
+<meta name="description" content="PJ Talk is a messaging app for one special person. Send videos, voice messages, photos and texts that stay between the two of you, kept in your own iCloud with no accounts, no ads and no tracking. It's built for long, real conversations, not group chats.">
+<meta property="og:title" content="PJ Talk">
+<meta property="og:description" content="PJ Talk is a messaging app for one special person. Send videos, voice messages, photos and texts that stay between the two of you, kept in your own iCloud with no accounts, no ads and no tracking. It's built for long, real conversations, not group chats.">
+<meta property="og:url" content="https://mcvickarlabs.com/pjtalk/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://mcvickarlabs.com/icon-512.png">
+<link rel="canonical" href="https://mcvickarlabs.com/pjtalk/">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #faf9f6;
+    --surface: #ffffff;
+    --ink: #1c1c1e;
+    --muted: #5f6368;
+    --line: #e3e1db;
+    --accent: #2f5d50;
+    --accent-soft: #e6efeb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141515;
+      --surface: #1c1d1e;
+      --ink: #ececea;
+      --muted: #a2a5a8;
+      --line: #2c2e30;
+      --accent: #8cc3b0;
+      --accent-soft: #1f2b27;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 28px 0; border-bottom: 1px solid var(--line); }
+  .brand { color: var(--ink); text-decoration: none !important; display: flex; align-items: center; gap: 12px; font-weight: 600; letter-spacing: -0.01em; font-size: 18px; }
+  .mark { width: 35px; height: 30px; fill: var(--accent); flex: none; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  header nav { display: flex; gap: 22px; font-size: 15px; white-space: nowrap; }
+  header nav a { color: var(--muted); }
+  header nav a:hover, header nav a[aria-current="page"] { color: var(--ink); text-decoration: none; }
+  .hero { padding: 72px 0 12px; }
+  h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 18px; font-weight: 650; }
+  .lede { font-size: 19px; color: var(--muted); max-width: 620px; margin: 0; }
+  .principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 44px 0 8px; }
+  .principle { border-top: 2px solid var(--accent); padding-top: 12px; }
+  .principle b { display: block; margin-bottom: 4px; }
+  .principle span { color: var(--muted); font-size: 15px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 56px 0 16px; font-weight: 600; }
+  .apps { display: grid; gap: 14px; }
+  .app {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 22px 22px 20px;
+  }
+  .app-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; margin-bottom: 6px; }
+  .app h3 { margin: 0; font-size: 20px; letter-spacing: -0.01em; }
+  .tag { font-size: 12.5px; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+  .app p { margin: 0 0 12px; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  footer.wrap { margin-top: 72px; padding: 28px 20px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+  .eyebrow { font-size: 14px; color: var(--accent); font-weight: 600; letter-spacing: .02em; margin: 0 0 10px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+  .feature { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+  .feature b { display: block; margin-bottom: 4px; font-size: 17px; }
+  .feature span { color: var(--muted); font-size: 15px; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+  .panel { border-top: 2px solid var(--accent); padding-top: 12px; }
+  .panel h3 { margin: 0 0 6px; font-size: 19px; }
+  .panel p { margin: 0; color: var(--muted); }
+  ul.plain { margin: 0; padding-left: 20px; color: var(--muted); }
+  ul.plain li { margin: 4px 0; }
+  .cta { margin-top: 56px; background: var(--accent-soft); border-radius: 14px; padding: 24px; }
+  .cta h3 { margin: 0 0 6px; font-size: 20px; }
+  .cta p { margin: 0 0 12px; color: var(--muted); }
+  .button { display: inline-block; background: var(--accent); color: var(--bg) !important; padding: 10px 18px; border-radius: 10px; font-weight: 600; text-decoration: none !important; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap"><a class="brand" href="/"><svg class="mark" viewBox="0 0 116 100" aria-hidden="true"><path d="M0 0H20L50 36L80 0H100V72H80V30L50 66L20 30V100H0Z"/><path d="M26 43L46 67V82H116V100H26Z"/></svg>McVickar Labs</a><nav aria-label="Site"><a href="/products/">Products</a><a href="mailto:testing@mcvickar.com">Contact</a></nav></div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">PJ Talk · iPhone · Mac · Coming soon to beta</p>
+      <h1>A private place for just the two of you.</h1>
+      <p class="lede">PJ Talk is a messaging app for one special person. Send videos, voice messages, photos and texts that stay between the two of you, kept in your own iCloud with no accounts, no ads and no tracking. It's built for long, real conversations, not group chats.</p>
+    </section>
+
+    <h2>What it does</h2>
+    <section class="features">
+      <div class="feature"><b>Video and voice first.</b><span>Record a video or a voice message in a tap. Long recordings are sent in parts as you go, so the other person can start watching or listening before you've finished.</span></div>
+      <div class="feature"><b>Words for every voice message.</b><span>Voice messages and videos come with a written transcript, made right on your device, so you can read along or find what was said later.</span></div>
+      <div class="feature"><b>Keep what matters.</b><span>Star your favorites and heart the most special ones. Hearted photos and videos stay on your phone, ready to open anytime.</span></div>
+      <div class="feature"><b>Know it got there.</b><span>See when a message is sent, delivered and read or played. If something doesn't make it, PJ Talk notices and sends it again.</span></div>
+      <div class="feature"><b>On iPhone and Mac.</b><span>Pick up the conversation on your Mac, with your whole history in one place.</span></div>
+    </section>
+
+    <h2>Private by design</h2>
+    <ul class="plain">
+      <li>Your conversation lives in your own iCloud, shared only with the one person you invite. There's no PJ Talk server and no account to create.</li>
+      <li>Transcripts are made on your device. Your words aren't sent anywhere to be processed.</li>
+      <li>No ads, no tracking, no third-party analytics.</li>
+      <li>You decide what the other person sees: read receipts, delivered marks and "last active" are each your choice. An optional app lock uses its own PIN or Face ID, not your phone's passcode.</li>
+    </ul>
+
+    <h2>System requirements</h2>
+    <ul class="plain">
+      <li>iPhone with iOS 18 or later.</li>
+      <li>Mac with macOS 15 or later.</li>
+      <li>Both people need an Apple Account signed in to iCloud.</li>
+    </ul>
+
+    <section class="cta">
+      <h3>PJ Talk is coming soon to beta.</h3>
+      <p>PJ Talk is in private testing now. Leave your email and we'll let you know when the beta opens.</p>
+      <a class="button" href="mailto:testing@mcvickar.com?subject=PJ%20Talk%20beta">Ask to hear when it's ready</a>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span>© 2026 McVickar Labs, LLC</span>
+    <span><a href="/">McVickar Labs</a> · <a href="mailto:testing@mcvickar.com">testing@mcvickar.com</a></span>
+  </footer>
+</body>
+</html>
