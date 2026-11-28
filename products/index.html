@@ -99,6 +99,17 @@
   .cta h3 { margin: 0 0 6px; font-size: 20px; }
   .cta p { margin: 0 0 12px; color: var(--muted); }
   .button { display: inline-block; background: var(--accent); color: var(--bg) !important; padding: 10px 18px; border-radius: 10px; font-weight: 600; text-decoration: none !important; }
+  .testers { margin-top: 18px; }
+  .tester { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .tester:last-child { padding-bottom: 0; }
+  .tester b { display: block; }
+  .tester span { color: var(--muted); font-size: 15px; }
+  .tester .button { flex: none; white-space: nowrap; }
+  .button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  @media (max-width: 640px) {
+    .tester { flex-direction: column; align-items: stretch; }
+    .tester .button { text-align: center; white-space: normal; }
+  }
 </style>
 </head>
 <body>
@@ -121,13 +132,22 @@
       <article class="app linked">
         <div class="app-head"><h3><a href="https://pjjournal.com/">PJ Journal</a></h3><span class="tag">iPhone · iPad · Mac · Apple Watch · App Store</span></div>
         <p>A voice-first private journal. Talk or type; everything is end-to-end encrypted with keys only on your devices, and syncs through your own iCloud. One purchase covers all your devices.</p>
-        <div class="links"><a href="https://pjjournal.com/">pjjournal.com</a><a href="https://apps.apple.com/app/apple-store/id6815332769">App Store</a></div>
+        <div class="links"><a href="https://pjjournal.com/">pjjournal.com</a><a href="https://apps.apple.com/app/apple-store/id6815332769">App Store</a><a href="mailto:testing@mcvickar.com?subject=PJ%20Journal%20beta&amp;body=Name%3A%0D%0AWhich%20devices%3A%0D%0A">Join the beta</a></div>
       </article>
       <article class="app linked">
         <div class="app-head"><h3><a href="/pjtalk/">PJ Talk</a></h3><span class="tag">iPhone · Mac · coming soon to beta</span></div>
         <p>PJ Talk is a private place for just the two of you: send videos, voice messages, photos and texts to one special person, kept in your own iCloud with no accounts, no ads and no tracking.</p>
         <div class="links"><a href="/pjtalk/">Learn more</a><a href="mailto:testing@mcvickar.com?subject=PJ%20Talk%20beta">Ask to hear when it's ready</a></div>
       </article>
+    </section>
+    <section class="cta">
+      <h3>Help test our apps</h3>
+      <p>We're looking for people to try new versions before they're released and tell us what works. Testing is free, and you can stop any time.</p>
+      <div class="testers">
+        <div class="tester"><div><b>PJ Journal</b><span>New versions early, on iPhone, iPad, Mac and Apple Watch, through Apple's TestFlight.</span></div><a class="button" href="mailto:testing@mcvickar.com?subject=PJ%20Journal%20beta&amp;body=Name%3A%0D%0AWhich%20devices%3A%0D%0A">Test PJ Journal</a></div>
+        <div class="tester"><div><b>Divorce Discovery Assist</b><span>For family-law offices and people going through a divorce, on a Mac.</span></div><a class="button" href="mailto:testing@mcvickar.com?subject=Divorce%20Discovery%20Assist%20beta&amp;body=Name%3A%0D%0AOffice%20%28if%20you%27re%20an%20attorney%20or%20staff%29%3A%0D%0AWhich%20Mac%2C%20and%20which%20macOS%20version%3A%0D%0AHow%20you%27d%20use%20Divorce%20Discovery%20Assist%3A%0D%0A">Test Divorce Discovery Assist</a></div>
+        <div class="tester"><div><b>PJ Talk</b><span>Be first to try it when the beta opens.</span></div><a class="button" href="mailto:testing@mcvickar.com?subject=PJ%20Talk%20beta">Ask to hear when it's ready</a></div>
+      </div>
     </section>
   </main>
 
