@@ -88,6 +88,14 @@
   .cta h3 { margin: 0 0 6px; font-size: 20px; }
   .cta p { margin: 0 0 12px; color: var(--muted); }
   .button { display: inline-block; background: var(--accent); color: var(--bg) !important; padding: 10px 18px; border-radius: 10px; font-weight: 600; text-decoration: none !important; }
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+  .shots figure { margin: 0; }
+  .shots img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 18px; }
+  .shots figcaption { margin-top: 10px; color: var(--muted); font-size: 14px; line-height: 1.45; }
+  @media (max-width: 640px) {
+    .shots { grid-template-columns: 1fr; gap: 28px; }
+    .shots figure { width: 100%; max-width: 300px; margin: 0 auto; }
+  }
 </style>
 </head>
 <body>
@@ -109,6 +117,12 @@
       <div class="feature"><b>Keep what matters.</b><span>Star your favorites and heart the most special ones. Hearted photos and videos stay on your phone, ready to open anytime.</span></div>
       <div class="feature"><b>Know it got there.</b><span>See when a message is sent, delivered and read or played. If something doesn't make it, PJ Talk notices and sends it again.</span></div>
       <div class="feature"><b>On iPhone and Mac.</b><span>Pick up the conversation on your Mac, with your whole history in one place.</span></div>
+    </section>
+
+    <section class="shots">
+      <figure><img src="/pjtalk/shots/conversation-view.png" srcset="/pjtalk/shots/conversation-view.png 1x, /pjtalk/shots/conversation-view@2x.png 2x" width="600" height="1304" loading="lazy" alt="A conversation with texts, a photo, a reaction and a voice message with its written transcript, each showing when it was read or played."><figcaption>A conversation with texts, a photo, a reaction and a voice message with its written transcript, each showing when it was read or played.</figcaption></figure>
+      <figure><img src="/pjtalk/shots/media-library.png" srcset="/pjtalk/shots/media-library.png 1x, /pjtalk/shots/media-library@2x.png 2x" width="600" height="1304" loading="lazy" alt="The library gathers every photo, video and voice message from the conversation in one place, by month."><figcaption>The library gathers every photo, video and voice message from the conversation in one place, by month.</figcaption></figure>
+      <figure><img src="/pjtalk/shots/library-favorites.png" srcset="/pjtalk/shots/library-favorites.png 1x, /pjtalk/shots/library-favorites@2x.png 2x" width="600" height="1304" loading="lazy" alt="Star your favorites and find them again with one tap, yours or the other person's."><figcaption>Star your favorites and find them again with one tap, yours or the other person's.</figcaption></figure>
     </section>
 
     <h2>Private by design</h2>
